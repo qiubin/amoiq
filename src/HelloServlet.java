@@ -14,11 +14,11 @@ public class HelloServlet extends  HttpServlet{
         PrintWriter out = resp.getWriter();
         out.println("<html>");
         out.println("<body>");
-        //»ñÈ¡ÉÏÏÂÎÄÂ·¾¶
+        //è·å–ä¸Šä¸‹æ–‡è·¯å¾„
         out.println("<h1>"+req.getContextPath()+"</h1>");
-        //»ñÈ¡¾ø¶ÔÂ·¾¶
+        //è·å–ç»å¯¹è·¯å¾„
         out.println("<h5>"+req.getSession().getServletContext().getRealPath("/")+"</h5>");
-        //»ñÈ¡ÇëÇó²ÎÊı
+        //è·å–è¯·æ±‚å‚æ•°
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         out.println("<h1>hello:"+username+",password:"+password+"</h1>");
@@ -32,4 +32,9 @@ public class HelloServlet extends  HttpServlet{
         out.println("</body>");
         out.println("</html>");
 }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req,resp);
+    }
 }

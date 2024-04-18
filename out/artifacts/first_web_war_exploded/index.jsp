@@ -11,7 +11,11 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <%
+  String str = "qiubin";
+  %>
+  欢迎：  <%=str%><BR>
   hello
+  中文测试
   </body>
 </html>
