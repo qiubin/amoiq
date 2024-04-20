@@ -17,5 +17,6 @@
   欢迎：  <%=str%><BR>
   hello
   中文测试
+  <a href="hello">hello mysql</a>
   </body>
 </html>
