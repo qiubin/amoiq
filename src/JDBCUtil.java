@@ -6,8 +6,13 @@ public class JDBCUtil {
     private static String database = "itat_emp";
     public static Connection getConnection() {
         Connection con = null;
+        /*
+        if not add this ,would not found driver
+		driver load!
+        * */
         try {
             Class.forName("com.mysql.jdbc.Driver");
+            System.out.println("database driver load success!");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
