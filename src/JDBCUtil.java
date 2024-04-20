@@ -6,6 +6,12 @@ public class JDBCUtil {
     private static String database = "itat_emp";
     public static Connection getConnection() {
         Connection con = null;
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
         String url = "jdbc:mysql://localhost:3306/"+database;
         try {
             con = DriverManager.getConnection(url, username, password);
